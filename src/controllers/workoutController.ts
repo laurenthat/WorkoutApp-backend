@@ -2,6 +2,7 @@ import { WorkoutModel } from "./../models/workoutModel";
 import { Request, Response } from "express";
 
 export const WorkoutController = {
+  // Creates a new workout
   async createWorkout(req: Request, res: Response) {
     try {
       const workout = await WorkoutModel.create(req.body);
@@ -11,6 +12,7 @@ export const WorkoutController = {
     }
   },
 
+  // Retrieves all workouts
   async getAllWorkouts(req: Request, res: Response) {
     try {
       const workouts = await WorkoutModel.getAll();
@@ -20,6 +22,7 @@ export const WorkoutController = {
     }
   },
 
+  // Retrieves a workout by ID
   async getWorkoutById(req: Request, res: Response) {
     try {
       const workout = await WorkoutModel.getById(parseInt(req.params.id));
@@ -33,6 +36,7 @@ export const WorkoutController = {
     }
   },
 
+  //Updates a workout by ID
   async updateWorkout(req: Request, res: Response) {
     try {
       const workout = await WorkoutModel.update(
@@ -49,6 +53,7 @@ export const WorkoutController = {
     }
   },
 
+  // Deletes a workout by ID
   async deleteWorkout(req: Request, res: Response) {
     try {
       const workout = await WorkoutModel.delete(parseInt(req.params.id));

@@ -6,6 +6,7 @@ import { initializeDatabase, initializeTable } from "./config/db";
 
 dotenv.config();
 
+// Initialize Express application
 const app = express();
 const port = process.env.PORT || 3000;
 

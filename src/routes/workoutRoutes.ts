@@ -1,8 +1,9 @@
 import { Router } from "express";
 import { WorkoutController } from "../controllers/workoutController";
 
+//Express router for workout routes
 const router = Router();
-// Create a new workout
+// Create a new workout entry
 router.post("/workouts", WorkoutController.createWorkout);
 
 // Get all workouts
